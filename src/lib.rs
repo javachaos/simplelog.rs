@@ -25,7 +25,7 @@ mod config;
 mod loggers;
 
 pub use self::config::{
-    format_description, Config, ConfigBuilder, FormatItem, LevelPadding, TargetPadding,
+    format_description, Config, ConfigBuilder, FormatItem, LevelPadding, LineEnding, TargetPadding,
     ThreadLogMode, ThreadPadding,
 };
 #[cfg(feature = "test")]
@@ -35,7 +35,6 @@ pub use self::loggers::{CombinedLogger, SimpleLogger, WriteLogger};
 pub use self::loggers::{TermLogger, TerminalMode};
 #[cfg(feature = "termcolor")]
 pub use termcolor::{Color, ColorChoice};
-
 pub use log::{Level, LevelFilter};
 
 use log::Log;
